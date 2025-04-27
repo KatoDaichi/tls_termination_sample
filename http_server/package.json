@@ -1,0 +1,25 @@
+{
+  "name": "tls_eliminate",
+  "version": "1.0.0",
+  "description": "Typescript",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.jsonc",
+    "format": "biome format . --write",
+    "lint": "biome check ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/type-provider-typebox": "^5.1.0",
+    "fastify": "^5.3.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.15.2",
+    "typescript": "^5.8.3"
+  }
+}

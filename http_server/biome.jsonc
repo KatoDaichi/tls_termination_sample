@@ -1,0 +1,30 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  // インポート文の自動整理機能の設定
+  "organizeImports": {
+    "enabled": true
+  },
+  // Biomeの全体的なフォーマット設定
+  "formatter": {
+    "enabled": true,
+    "ignore": ["node_modules"],
+    "indentStyle": "space"
+  },
+  // コードのチェックの設定
+  "linter": {
+    "enabled": true,
+    "ignore": ["node_modules"],
+    "rules": {
+      "recommended": true
+    }
+  },
+  // JavaScript(TypeScript)のフォーマット設定
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all"
+    }
+  }
+}

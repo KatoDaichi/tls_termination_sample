@@ -1,0 +1,21 @@
+{
+  // TypeScriptコンパイラのオプション設定
+  "compilerOptions": {
+    // コンパイル後のJavaScriptのバージョンを指定
+    "target": "ES2022",
+    // モジュールシステムの指定
+    "module": "ES2022",
+    // モジュール解決の方法を指定
+    "moduleResolution": "node",
+    // コンパイル後のファイルの出力先ディレクトリ
+    "outDir": "./dist",
+    // ソースコードのルートディレクトリ
+    "rootDir": "./src",
+    // CommonJSモジュールとESモジュールの相互運用性を有効化（import/requireの互換性向上）
+    "esModuleInterop": true,
+    // ファイル名の大文字小文字を厳密にチェック（WindowsとLinux/Macの違いによる問題を防止）
+    "forceConsistentCasingInFileNames": true,
+    // 厳格な型チェックを有効化（null/undefinedチェックなど）
+    "strict": true
+  }
+}

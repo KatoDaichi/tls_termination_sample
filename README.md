@@ -1,22 +1,16 @@
-# TLS終端サンプル
+# TLS終端リバースプロキシ構成のサンプル
 
-## 環境構築
+「TLS終端リバースプロキシ + アプリケーションサーバー」のサンプルの実装サンプルです
 
-> [!NOTE] 本資料記載時の実行環境は`mac OS Sequoia 15.3.2`
+## 起動
 
 ```sh
-# Homebrewインストール（macのパッケージ管理ツール）
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# 初期化処理を実行
+sh init.sh
 
-# curlインストール（コマンドラインのHTTPクライアント）
-brew install curl
+# TLS終端リバースプロキシ構成を起動
+docker compose up --build
 
-# nvmインストール（node.jsバージョン管理ツール）
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
-# node.jsをインストール（.nvmrc記載のバージョンがインストールされる）
-nvm install
-
-# 使用するnode.jsのバージョンを決定
-nvm use
+# 疎通確認
+curl -k -X POST https://localhost/echo -H "Content-Type: application/json" -d '{"text": "test"}'
 ```

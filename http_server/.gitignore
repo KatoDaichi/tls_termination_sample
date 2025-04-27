@@ -1,0 +1,7 @@
+# Node.jsの依存ファイル
+/node_modules/
+
+# TypeScriptのコンパイル出力（distディレクトリ）
+/dist/
+/build/
+/lib/
